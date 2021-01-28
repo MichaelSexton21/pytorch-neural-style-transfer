@@ -1,9 +1,4 @@
 ## Neural Style Transfer (optimization method) :computer: + :art: = :heart:
-
-This repo has been forked from Aleksa Gordic (gordicaleksa) and altered by Michael Sexton (MichaelSexton21) to be compatable with Code Ocean's App Panel Feature (https://codeocean.com).
-
-The original readme has been renamed to README_old.md and contains all of the deserved credit and acknowledgments.
-
 This repo contains a concise PyTorch implementation of the original NST paper (:link: [Gatys et al.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)).
 
 It's an accompanying repository for [this video series on YouTube](https://www.youtube.com/watch?v=S78LQebx6jo&list=PLBoQnSflObcmbfshq9oNs41vODgXG-608).
