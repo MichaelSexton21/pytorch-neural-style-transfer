@@ -2,11 +2,47 @@
 
 This repo has been forked from Aleksa Gordic (gordicaleksa) and altered by Michael Sexton (MichaelSexton21) to be compatable with Code Ocean's App Panel Feature (https://codeocean.com).
 
-The original readme has been renamed to README_old.md and contains all of the deserved credit and acknowledgments.
+This repo contains a concise PyTorch implementation of the original NST paper (:link: [Gatys et al.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)). It's an accompanying repository for [this video series on YouTube](https://www.youtube.com/watch?v=S78LQebx6jo&list=PLBoQnSflObcmbfshq9oNs41vODgXG-608). The original readme has been renamed to README_old.md and contains all of the deserved credit and acknowledgments.
 
-This repo contains a concise PyTorch implementation of the original NST paper (:link: [Gatys et al.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)).
-
-It's an accompanying repository for [this video series on YouTube](https://www.youtube.com/watch?v=S78LQebx6jo&list=PLBoQnSflObcmbfshq9oNs41vODgXG-608).
+## Code Ocean Setup VPC
+* Git clone this repository into a Capsule
+* Select the most up to date Python Environment (3.7 or 3.8)
+* Move all the files except this file (README.md) into the code folder
+* Use the environment_requirements.txt file to build the environment
+* Set Artline.py to run
+* Open up the App Panel tab, you will need two inputs:
+  * File Input: Image File Path (default: lion.png)
+  * List Input: Output Image Size (920 or 650) I recommend 650 so it runs faster
+* Use the two links below to download the models for 650 and 920 models to the code folder
+  * I recommend launching a CW station (Terminal or JupyterLab) and using the download_models.sh script I wrote to help
+  * You may need to change the permission of the file to be able to run it using the commands:
+     * chmod +755 download_models.sh
+     * ./download_models.sh
+* Create an Image folder within the Data folder and place what ever image you like
+* Run the project by specifiy your desired settings in the App Panel and press "Run with parameters" to begin
+     
+## Code Ocean Setup SaaS
+* Git clone this repository into a Capsule
+* Select the "Python with GPU support (3.7.3, miniconda 4.7.10)" environment
+* Move all the files except this file (README.md) into the code folder
+* Use the environment.txt file to build the environment
+* Set neural_style_transfer.py to run
+* Add command line arguments to the run command
+     * --content_img_name (help="automatically searches the /data/content-images/ folder", default='figures.jpg')
+     * --style_img_name (help="automatically searches the /data/style_images/ folder", default='vg_starry_night.jpg')
+     * --height (default=400)
+     * --content_weight (default=1e5)
+     * --style_weight (default=3e4)
+     * --tv_weight (default=1e0)
+     * --optimizer (choices=['lbfgs', 'adam'], default='lbfgs')
+     * --model (choices=['vgg16', 'vgg19'], default='vgg19')
+     * --init_method (choices=['random', 'content', 'style'], default='content')
+     * --saving_freq (default=-1, -1 means only final))
+     * --iterations (default=500)
+     * --create_video (choices=['Yes', 'No'], default="No")
+     * The following is an example command 
+        * python neural_style_transfer.py --content_img_name lion.jpg --style_img_name "mosaic.jpg" --height 400 --content_weight 100000 --style_weight 30000 --tv_weight 1 --optimizer lbfgs --model vgg19 --init_method content --saving_frequency -1 500 No
+* Click "Reproducible Run"
 
 <p align="left">
 <a href="https://www.youtube.com/watch?v=S78LQebx6jo" target="_blank"><img src="https://img.youtube.com/vi/S78LQebx6jo/0.jpg" 
