@@ -14,3 +14,20 @@ pytorch==1.7.1
 pip:
 opencv-python==4.4.0.46
 torchvision==0.8.2
+
+VPC Environment:
+Python with GPU support (3.7.3, miniconda 4.7.10)
+
+apt-get:
+ffmpeg==7:3.4.8-0ubuntu0.2
+libgl1-mesa-glx==20.0.8-0ubuntu1~18.04.1
+
+conda:
+chanels==conda-forge,pytorch
+matplotlib==3.3.2
+numpy==1.19.4
+pytorch==1.7.1
+
+pip:
+opencv-python==4.4.0.46
+torchvision==0.8.2
