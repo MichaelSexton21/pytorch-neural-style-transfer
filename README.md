@@ -9,24 +9,23 @@ This repo contains a concise PyTorch implementation of the original NST paper (:
 * Select the "Python with GPU support (3.7.3, miniconda 4.7.10)" environment
 * Move all the files except this file (README.md) into the code folder
 * Use the environment.txt file to build the environment
-* Set neural_style_transfer.py to run
-* Add command line arguments to the run command
-     * --content_img_name (help="automatically searches the /data/content-images/ folder", default='figures.jpg')
-     * --style_img_name (help="automatically searches the /data/style_images/ folder", default='vg_starry_night.jpg')
-     * --height (default=400)
-     * --content_weight (default=1e5)
-     * --style_weight (default=3e4)
-     * --tv_weight (default=1e0)
-     * --optimizer (choices=['lbfgs', 'adam'], default='lbfgs')
-     * --model (choices=['vgg16', 'vgg19'], default='vgg19')
-     * --init_method (choices=['random', 'content', 'style'], default='content')
-     * --saving_freq (default=-1, -1 means only final))
-     * --iterations (default=500)
-     * --create_video (choices=['Yes', 'No'], default="No")
-     * The following is an example command 
-        * python neural_style_transfer.py --content_img_name lion.jpg --style_img_name "mosaic.jpg" --height 400 --content_weight 100000 --style_weight 30000 --tv_weight 1 --optimizer lbfgs --model vgg19 --init_method content --saving_frequency -1 500 No
-* Click "Reproducible Run"
-* Run the project by specifiy your desired settings in the App Panel and press "Run with parameters" to begin
+* Set the file to run
+     * If you want to edit the original file to be compatable with the App Panel, set neural_style_transfer.py to run and make the appropriate Command Line Argument edits
+     * Otherwise, set neural_style_transfer_app_panel.py to run where I have already altered to code to be compatable.
+* Select the app panel tab on the left edge of the screen and use the parameters below with the format (parameter type, parameter name, values, default value):
+     * file, "Content Image", file paths, figures.jpg
+     * file, "Style Image", file paths, vg_starry_night.jpg
+     * text, "Height of Output Picture", positive number, 400
+     * text, "Content Weight", positive whole number, 1e5 (100000)
+     * text, "Style Weight", positive whole number, 3e4 (30000)
+     * text, "TV Weight", positive whole number, 1 (I recommend you don't change this)
+     * list, "Optimizer", ['lbfgs', 'adam'],'lbfgs'
+     * list, "Model", ['vgg16', 'vgg19'], 'vgg19'
+     * list, "Initialization Method", ['random', 'content', 'style'], 'content'
+     * text, "Saving Frequency", -1<=x<=iterations, -1 (-1 means only the final image)
+     * text, "Iterations", positive whole number, 500
+     * list, "Create Training Video", ['Yes', 'No'], "No")
+* Run the project by specifiy your desired settings in the App Panel and press "Run with parameters" to begin. I suggest using the default parameters for the first run.
      
 ## Code Ocean Setup SaaS
 * Git clone this repository into a Capsule
