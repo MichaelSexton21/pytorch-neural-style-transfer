@@ -19,7 +19,7 @@ This repo contains a concise PyTorch implementation of the original NST paper (:
      * text, "Content Weight", positive whole number, 1e5 (100000)
      * text, "Style Weight", positive whole number, 3e4 (30000)
      * text, "TV Weight", positive whole number, 1 (I recommend you don't change this)
-     * list, "Optimizer", ['lbfgs', 'adam'],'lbfgs'
+     * list, "Optimizer", ['adam', 'lbfgs'],'adam'
      * list, "Model", ['vgg16', 'vgg19'], 'vgg19'
      * list, "Initialization Method", ['random', 'content', 'style'], 'content'
      * text, "Saving Frequency", -1<=x<=iterations, -1 (-1 means only the final image)
