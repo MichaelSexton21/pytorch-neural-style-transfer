@@ -40,14 +40,14 @@ This repo contains a concise PyTorch implementation of the original NST paper (:
      * --content_weight (default=1e5)
      * --style_weight (default=3e4)
      * --tv_weight (default=1e0)
-     * --optimizer (choices=['lbfgs', 'adam'], default='lbfgs')
+     * --optimizer (choices=['adam', lbfgs'], default='adam')
      * --model (choices=['vgg16', 'vgg19'], default='vgg19')
      * --init_method (choices=['random', 'content', 'style'], default='content')
      * --saving_freq (default=-1, -1 means only final))
      * --iterations (default=500)
      * --create_video (choices=['Yes', 'No'], default="No")
      * The following is an example command 
-        * python neural_style_transfer.py --content_img_name lion.jpg --style_img_name "mosaic.jpg" --height 400 --content_weight 100000 --style_weight 30000 --tv_weight 1 --optimizer lbfgs --model vgg19 --init_method content --saving_frequency -1 500 No
+        * python neural_style_transfer.py --content_img_name lion.jpg --style_img_name "mosaic.jpg" --height 400 --content_weight 100000 --style_weight 30000 --tv_weight 1 --optimizer adam --model vgg19 --init_method content --saving_frequency -1 500 No
 * Click "Reproducible Run"
 
 <p align="left">
