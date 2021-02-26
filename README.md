@@ -10,6 +10,8 @@ This repo contains a concise PyTorch implementation of the original NST paper (:
 * Move all the files except this file (README.md) into the code folder
 * Use the environment.txt file to build the environment
 * Set "neural_style_transfer_app_panel.py" to run
+* At this point I recommend running the capsule using "Reproducible Run". This will build the environment.
+* While the environment is building, you can build the app panel to save time.
 * Select the app panel tab on the left edge of the screen and use the parameters below with the format (parameter type, parameter name, values, default value):
      * file, "Content Image", file paths, figures.jpg
      * file, "Style Image", file paths, vg_starry_night.jpg
