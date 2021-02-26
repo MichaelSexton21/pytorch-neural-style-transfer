@@ -9,9 +9,7 @@ This repo contains a concise PyTorch implementation of the original NST paper (:
 * Select the "Python with GPU support (3.7.3, miniconda 4.7.10)" environment
 * Move all the files except this file (README.md) into the code folder
 * Use the environment.txt file to build the environment
-* Set the file to run
-     * If you want to edit the original file to be compatable with the App Panel, set neural_style_transfer.py to run and make the appropriate Command Line Argument edits
-     * Otherwise, set neural_style_transfer_app_panel.py to run where I have already altered to code to be compatable.
+* Set "neural_style_transfer_app_panel.py" to run
 * Select the app panel tab on the left edge of the screen and use the parameters below with the format (parameter type, parameter name, values, default value):
      * file, "Content Image", file paths, figures.jpg
      * file, "Style Image", file paths, vg_starry_night.jpg
