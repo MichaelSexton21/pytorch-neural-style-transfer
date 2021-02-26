@@ -4,7 +4,7 @@ This repo has been forked from Aleksa Gordic (gordicaleksa) and altered by Micha
 
 This repo contains a concise PyTorch implementation of the original NST paper (:link: [Gatys et al.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)). It's an accompanying repository for [this video series on YouTube](https://www.youtube.com/watch?v=S78LQebx6jo&list=PLBoQnSflObcmbfshq9oNs41vODgXG-608). The original readme has been renamed to README_old.md and contains all of the deserved credit and acknowledgments.
 
-## Code Ocean Setup VPC
+## Code Ocean Setup
 * Git clone this repository into a Capsule
 * Select the "Python with GPU support (3.7.3, miniconda 4.7.10)" environment
 * Move all the files except this file (README.md) into the code folder
@@ -27,11 +27,7 @@ This repo contains a concise PyTorch implementation of the original NST paper (:
      * list, "Create Training Video", ['Yes', 'No'], "No")
 * Run the project by specifiy your desired settings in the App Panel and press "Run with parameters" to begin. I suggest using the default parameters for the first run.
      
-## Code Ocean Setup SaaS
-* Git clone this repository into a Capsule
-* Select the "Python with GPU support (3.7.3, miniconda 4.7.10)" environment
-* Move all the files except this file (README.md) into the code folder
-* Use the environment.txt file to build the environment
+## Using the Command Line/Run File
 * Set neural_style_transfer.py to run
 * Add command line arguments to the run command
      * --content_img_name (help="automatically searches the /data/content-images/ folder", default='figures.jpg')
