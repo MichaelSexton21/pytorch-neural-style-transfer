@@ -130,8 +130,8 @@ if __name__ == "__main__":
     # fixed args - don't change these unless you have a good reason
     #
     default_resource_dir = os.path.join(os.path.dirname(__file__), '../data')
-    content_images_dir = os.path.join(default_resource_dir, 'content-images')
-    style_images_dir = os.path.join(default_resource_dir, 'style-images')
+    content_images_dir = os.path.join(default_resource_dir, 'images-to-be-painted')
+    style_images_dir = os.path.join(default_resource_dir, 'paintings')
     output_img_dir = os.path.join(default_resource_dir, '../results')
     img_format = (4, '.jpg')  # saves images in the format: %04d.jpg
 
@@ -145,13 +145,13 @@ if __name__ == "__main__":
     height = int(sys.argv[3])
     content_weight = float(sys.argv[4])
     style_weight = float(sys.argv[5])
-    tv_weight = float(sys.argv[6])
-    optimizer = sys.argv[7]
-    model = sys.argv[8]
-    init_method = sys.argv[9]
-    saving_freq = int(sys.argv[10])
-    iterations = int(sys.argv[11])
-    create_video = sys.argv[12]
+    tv_weight = 1
+    optimizer = 'lbfgs'
+    model = 'vgg19'
+    init_method = 'content'
+    saving_freq = int(sys.argv[6])
+    iterations = int(sys.argv[7])
+    create_video = sys.argv[8]
 
     if create_video == "Yes":
         saving_freq = 1
