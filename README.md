@@ -13,15 +13,11 @@ This repo contains a concise PyTorch implementation of the original NST paper (:
 * At this point I recommend running the capsule using "Reproducible Run". This will build the environment.
 * While the environment is building, you can build the app panel to save time.
 * Select the app panel tab on the left edge of the screen and use the parameters below with the format (parameter type, parameter name, values, default value):
-     * file, "Content Image", file paths, figures.jpg
-     * file, "Style Image", file paths, vg_starry_night.jpg
+     * file, "Image-To-Be-Painted", file paths, figures.jpg
+     * file, "Painting", file paths, vg_starry_night.jpg
      * text, "Height of Output Picture", positive number, 400
-     * text, "Content Weight", positive whole number, 1e5 (100000)
-     * text, "Style Weight", positive whole number, 3e4 (30000)
-     * text, "TV Weight", positive whole number, 1 (I recommend you don't change this)
-     * list, "Optimizer", ['adam', 'lbfgs'],'adam'
-     * list, "Model", ['vgg16', 'vgg19'], 'vgg19'
-     * list, "Initialization Method", ['random', 'content', 'style'], 'content'
+     * text, "Weight of Image", positive whole number, 1e5 (100000)
+     * text, "Weight of Painting", positive whole number, 3e4 (30000)
      * text, "Saving Frequency", -1<=x<=iterations, -1 (-1 means only the final image)
      * text, "Iterations", positive whole number, 500
      * list, "Create Training Video", ['Yes', 'No'], "No")
