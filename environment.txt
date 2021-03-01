@@ -15,7 +15,7 @@ pip:
 opencv-python==4.4.0.46
 torchvision==0.8.2
 
-VPC Environment:
+VPC (Edge) Environment:
 Python with GPU support (3.7.3, miniconda 4.7.10)
 
 apt-get:
